@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fibonacci Series</title>
+</head>
+<body>
+    <script>
+        let a=prompt("Enter the number of terms")
+        a=parseFloat(a)
+        let n1=0,n2=1,nextTerm;
+        for (let i = 1; i <= a; i++) {
+                document.write(n1+' '); 
+                temp=n1+n2;       
+                n1=n2;                 
+                n2=temp;
+
+        }
+
+    </script>
+</body>
+</html>
