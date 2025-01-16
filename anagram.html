@@ -1,0 +1,16 @@
+function anagram(x, y) {
+    x=x.toLowerCase();
+    y=y.toLowerCase();
+    if (x.length!==y.length) {
+        return false;
+    }
+    let c=x.split('')
+    c=c.sort()
+    c=c.join('');
+    let d = y.split('')
+    d=d.sort()
+    d=d.join('');
+    return c==d;
+}
+console.log(anagram('human','nhmua'));
+console.log(anagram('apple','banana'));

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="3"><input id="result" type="text"></td>
+            <td><button onclick="clearResult()">C</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="dis('1')">1</button></td>
+            <td><button onclick="dis('2')">2</button></td>
+            <td><button onclick="dis('3')">3</button></td>
+            <td><button onclick="dis('/')">/</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="dis('4')">4</button></td>
+            <td><button onclick="dis('5')">5</button></td>
+            <td><button onclick="dis('6')">6</button></td>
+            <td><button onclick="dis('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="dis('7')">7</button></td>
+            <td><button onclick="dis('8')">8</button></td>
+            <td><button onclick="dis('9')">9</button></td>
+            <td><button onclick="dis('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="dis('0')">0</button></td>
+            <td><button onclick="dis('.')">.</button></td>
+            <td><button onclick="calculate()">=</button></td>
+            <td><button onclick="dis('+')">+</button></td>
+        </tr>
+
+
+    </table>
+    <script>
+        let dis=(x)=>{
+            document.getElementById('result').value +=x;
+        }
+
+        let calculate=()=>{
+            let p=document.getElementById('result').value;
+            if(p===''){
+                alert('please enter valid expression')
+            }
+            else{
+                let q=eval(p)
+                document.getElementById('result').value=q;   
+            }
+        }
+        let clearResult=()=>{
+            document.getElementById('result').value=""; 
+        }
+    </script>
+</body>
+</html>
